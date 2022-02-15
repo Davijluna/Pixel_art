@@ -25,9 +25,13 @@
     #amarelo{
         background-color: yellow;
     }
-    
+    #pixel-board{
+        width: 250px;
+    }
     .pixel{
         background-color: white;
+        border: 1px solid black;
         height: 40px;
         width:40px;
+        display: inline-block;
     }
