@@ -30,12 +30,12 @@
         border: 1px solid black;
     }
     #pixel-board{
-        width: 250px;
+        width: 225px;
     }
     .pixel{
         background-color: white;
         border: 1px solid black;
+        width: 40px;
         height: 40px;
-        width:40px;
         display: inline-block;
     }
