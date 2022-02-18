@@ -3,13 +3,12 @@ let blue = document.querySelector('.blue');
 let green = document.querySelector('.green');
 let yellow = document.querySelector('.yellow');
 
-// function selector(event){
-//     const itemselector = document.querySelector(".selected");
-//     itemselector.classList.remove('selected');
-//     event.target.classList.add('selected');
-// }
-let cores = ['black','blue','yellow','green']
-
+const cores = ['black','blue','yellow','green']
+/*
+Tive ajuda do Guilherme Frenandez na logica do Guilherme na sala de estudos 
+Ele me ajodou explicando sobre os elementos pai e os elementos filhos  
+    A orientação foi da linha 15 a 20 
+*/
 function criarPaleta(array){
     let paletaDeCores = document.getElementById("color-palette"); // recebendo id do HTML.
 
@@ -24,7 +23,7 @@ function criarPaleta(array){
 criarPaleta(cores);
 
     let pretaPosition = document.querySelector('#color-palette').childNodes[3]
-    pretaPosition.className ='color selected';
+        pretaPosition.className ='color selected';
 
     let paletaDeCores = document.querySelector("#color-palette"); // variavel receben a id color-palette
     paletaDeCores.addEventListener('click',
@@ -39,24 +38,14 @@ criarPaleta(cores);
     
 })
 
-
-
-
-
-// function trocaCor(event){
-//     let corAntiga =document.querySelector('.selected')
-//     corAntiga.classList.remove('')
-// }
-
-// cores.addEventListener("click",trocaCor)
 let tamanho = 5
-
+// tive ajuda do tiago na mentor,explicando a logica do exercicio e separando etapa por etapa.
 function gerarBoard(tamanho){
     let variavel= document.querySelector('#pixel-board')
     for(let index=0;index < tamanho;index+=1){
         //Aqui eu crio as lindhas
         let q = document.createElement('div');
-        variavel.appendChild(q);
+        variavel.appendChild(q);                              // colocar nomes nas variaveis
         q.className ='pixel';
         for(let contador=0;contador < 4; contador+=1){
         // Aqui eu crio um pixelva
@@ -70,12 +59,7 @@ function gerarBoard(tamanho){
 }
 gerarBoard(tamanho);
 
-function evento(event){
-    // const selectInt = document.querySelector(".selected");
-    // selectInt.classList.remove('selected');
-    // event.target.classList.add('selected');
 
-}
 let Position2 = document.querySelector('#pixel-board').childNodes
     Position2.className ='selected';
 
